@@ -1,0 +1,127 @@
+#Amoeba multiplication
+m=int(input("Enter the number of Months:"))
+a=-1
+b=1
+for i in range(1,m+1):
+    c=a+b
+    a=b
+    b=c
+print("The amoeba size is ",c)
+
+#Factorial
+n=int(input())
+temp=n
+sum=0
+for i in range(1,n):
+    if n%i==0:
+      sum=sum+i
+if temp==sum:
+    print("yes")
+else:
+    print("no")
+    
+#Sum of digits
+n=int(input())
+sum=0
+while n!=0:
+    rem=n%10
+    sum=sum+rem
+    n=n//10
+print(sum)
+
+#Harshad number
+n=int(input())
+sum=0
+temp=n
+while n!=0:
+    rem=n%10
+    sum=sum+rem
+    n=n//10
+if temp%sum==0:
+    print("Harshad number")
+else:
+    print("Not Harshad number")
+    
+#LCM of two numbers
+a=int(input())
+b=int(input())
+if(a>b):
+    max=a
+else:
+    max=b
+while(True):
+    if(max%a==0 and max%b==0):
+        print("LCM of  %d"%a,"and %d"%b," is %d"%max)
+        break
+    max=max+1
+   
+#Palindrome of a number
+n=int(input())
+rev=0
+temp=n
+while n!=0:
+    rem=n%10
+    rev=rev*10+rem
+    n=n//10
+if temp==rev:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+    
+#Perfect number
+n=int(input())
+sum=0
+for i in range(1,n):
+    if n%i==0:
+        sum=sum+i
+if n==sum:
+    print("Perfect Number")
+else:
+    print("Not a perfect number")
+    
+#Prime number in range
+a=int(input())
+b=int(input())
+for j in range(a,b+1):
+    count=0
+    for i in range(2,(j//2)+1):
+        if j%i==0:
+           count+=1
+    if count==0 and j!=1:
+        print(j)
+print()          
+
+#Reverse of a number
+n=int(input())
+rev=0
+while n!=0:
+    rem=n%10
+    rev=rev*10+rem
+    n=n//10
+print(rev)
+
+#Strong number
+n=int(input())
+fact=1
+sf=0
+sum=0
+temp=n
+for i in range(1,n+1):
+    rem=n%10
+    for j in range(1,rem+1):
+        fact=fact*j
+        sf=sf+fact
+    sum=sum+sf
+    n=n//10
+    sf=0
+if temp==sum:
+    print("Strong Number")
+else:
+    print("Not a strong number")
+    
+ #Sum of natural numbers
+ n=int(input())
+sum=(n*(n+1))//2
+print(sum)
+
+#
